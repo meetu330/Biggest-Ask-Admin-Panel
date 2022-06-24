@@ -1,0 +1,73 @@
+<app-navbar> </app-navbar>
+<section class="container">
+  <div class="jFlex">
+    <h1>Our Journeys</h1>
+    <div class="d-flex ml-auto">
+      <div class="position-relative">
+        <input type="text" name="search" id="search" placeholder="Search jorneys and clients" [(ngModel)]="searchText">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="selectDiv">
+        Sort By :
+        <select class="select">
+          <option value="Latest Added">Latest Added</option>
+          <option value="Oldest Added">Oldest Added</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <!-- <tr *ngFor="let hero of heroes | filter:searchText">
+    <td>{{hero.id}}</td>
+    <td>{{hero.name}}</td>
+    <td>{{hero.country}}</td>
+  </tr> -->
+  <div class="row">
+    <div class="col-md-4" *ngFor="let curr of JourneyData | filter:searchText">
+      <div class="cardDiv" routerLink="/journey/{{curr.id}}">
+        <div class="journey">
+          <h1>Journey #21</h1>
+          <div class="dots d-flex-jcc-aic ">
+            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+          </div>
+        </div>
+        <h3>Next Milestone: <a>13 Feb., 10:30</a></h3>
+        <div class="parentDiv">
+          <div data-flex>
+            <div>
+              <img src="https://biggestaskbackend.justcodenow.com/images/profile/{{curr.parent_image1}}" alt="human">
+            </div>
+            <div>
+              <h5>{{curr.parent_name}}</h5>
+              <h6>Parent #1 </h6>
+            </div>
+          </div>
+
+        </div>
+        <div class="parentDiv">
+          <div data-flex>
+            <div>
+              <img src="https://biggestaskbackend.justcodenow.com/images/profile/{{curr.parent_image2}}" alt="human">
+            </div>
+            <div>
+              <h5>{{curr.parent_partner_name}}</h5>
+              <h6>Partner  </h6>
+            </div>
+          </div>
+
+        </div>
+        <div class="parentDiv">
+          <div data-flex>
+            <div>
+              <img src="https://biggestaskbackend.justcodenow.com/images/profile/{{curr.image1}}" alt="human">
+            </div>
+            <div>
+              <h5>{{curr.name}}</h5>
+              <h6>surrogate</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

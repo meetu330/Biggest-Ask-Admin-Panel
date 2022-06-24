@@ -1,0 +1,184 @@
+<app-navbar></app-navbar>
+<section class="container">
+  <button class="journeyBtn" routerLink="/ourjourneys"> <i class="fa fa-long-arrow-left" aria-hidden="true"></i> Back to
+    Our Journeys</button>
+</section>
+<div class="line"></div>
+<section class="container position-relative">
+  <div class="row jourRow">
+    <div class="col-md-4">
+      <div class="left">
+        <h1>Journey #21:</h1>
+        <p>A, mollis lectus blandit sed sit volutpat morbi. Justo purus quis</p>
+        <div class="line2"></div>
+        <div class="listingDiv">
+          <div class="parentDiv position-relative" id="parent" data-toggle="modal" data-target="#exampleModalParent">
+            <div  class="modal modal1 fade" id="exampleModalParent" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <div class="img">
+                      <img
+                        src="https://biggestaskbackend.justcodenow.com/images/profile/{{journeyData.journy[0]['parent_image1']}}"
+                        alt="humanImage">
+                    </div>
+                    <h1>{{journeyData.journy[0]['parent_name']}}</h1>
+                    <h2>Parent #1</h2>
+                    <h2>{{journeyData.journy[0]['parent_email']}}</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-flex>
+              <div>
+                <img
+                  src="https://biggestaskbackend.justcodenow.com/images/profile/{{journeyData.journy[0]['parent_image1']}}"
+                  alt="human">
+              </div>
+              <div>
+                <h5>{{journeyData.journy[0]['parent_name']}}</h5>
+                <h6>Parent #1 </h6>
+              </div>
+            </div>
+            <div>
+              <img class="svgImg" src="../../assets/Images/Shape.svg" alt="svg">
+            </div>
+          </div>
+          <div class="parentDiv position-relative" id="partner" data-toggle="modal" data-target="#exampleModalPartner">
+            <div class="modal modal1 fade" id="exampleModalPartner" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <div class="img">
+                      <img
+                        src="https://biggestaskbackend.justcodenow.com/images/profile/{{journeyData.journy[0]['parent_image2']}}"
+                        alt="humanImage">
+                    </div>
+                    <h1>{{journeyData.journy[0]['parent_partner_name']}}</h1>
+                    <h2>Parent #2</h2>
+                    <h2>{{journeyData.journy[0]['parent_email']}}</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-flex>
+              <div>
+                <img
+                  src="https://biggestaskbackend.justcodenow.com/images/profile/{{journeyData.journy[0]['parent_image2']}}"
+                  alt="human">
+              </div>
+              <div>
+                <h5>{{journeyData.journy[0]['parent_partner_name']}}</h5>
+                <h6>Parent #2 </h6>
+              </div>
+            </div>
+            <div>
+              <img class="svgImg" src="../../assets/Images/Shape.svg" alt="svg">
+            </div>
+          </div>
+          <div class="parentDiv position-relative" id="surrogate"  data-toggle="modal" data-target="#exampleModalSurrogate">
+            <div class="modal modal1 fade" id="exampleModalSurrogate" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <div class="img">
+                      <img
+                        src="https://biggestaskbackend.justcodenow.com/images/profile/{{journeyData.journy[0]['image1']}}"
+                        alt="humanImage">
+                    </div>
+                    <h1>{{journeyData.journy[0]['name']}}</h1>
+                    <h2>Surrogate</h2>
+                    <h2>{{journeyData.journy[0]['email']}}</h2>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-flex>
+              <div>
+                <img src="https://biggestaskbackend.justcodenow.com/images/profile/{{journeyData.journy[0]['image1']}}"
+                  alt="human">
+              </div>
+              <div>
+                <h5>{{journeyData.journy[0]['name']}}</h5>
+                <h6>Surrogate </h6>
+              </div>
+            </div>
+            <div>
+              <img class="svgImg" src="../../assets/Images/Shape.svg" alt="svg">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="right">
+        <h1>Milestones for Journey #21 </h1>
+        <p>Aliquet sit interdum cras aenean. Imperdiet scelerisque cras elementum tellus ultricies diam amet. Massa dui
+          ac proin sed. Facilisis vestibulum.</p>
+        <div class="accordion" id="accordionExample{{i}}" *ngFor="let curr of milestones , let i = index">
+          <div class="card">
+            <div class="card-header" data-toggle="collapse" [attr.data-target]="'#collapseOne'+i" aria-expanded="true">
+              <span class="title"> <span class="blue">03</span> Health check ({{curr.date}}) </span>
+              <span class="accicon"><i class="fa fa-chevron-down rotate-icon" aria-hidden="true"></i></span>
+            </div>
+            <div id="collapseOne{{i}}" class="collapse show" [attr.data-parent]="'#accordionExample'+i">
+              <div class="card-body">
+                <div class="parentDiv">
+                  <div data-flex>
+                    <div>
+                      <img
+                        src="https://biggestaskbackend.justcodenow.com/images/profile/{{journeyData.journy[0]['parent_image1']}}"
+                        alt="human">
+                    </div>
+                    <div>
+                      <h5>{{journeyData.journy[0]['parent_name']}} <span>(Parent #1)</span> </h5>
+                      <h6 class="gray">In in nisi augue diam pellentesque sit nam ut faucibus. </h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="parentDiv">
+                  <div data-flex>
+                    <div>
+                      <img
+                        src="https://biggestaskbackend.justcodenow.com/images/profile/{{journeyData.journy[0]['parent_image2']}}"
+                        alt="human">
+                    </div>
+                    <div>
+                      <h5>{{journeyData.journy[0]['parent_partner_name']}} <span>(Parent #2)</span> </h5>
+                      <h6 class="gray">In in nisi augue diam pellentesque sit nam ut faucibus. </h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="parentDiv">
+                  <div data-flex>
+                    <div>
+                      <img
+                        src="https://biggestaskbackend.justcodenow.com/images/profile/{{journeyData.journy[0]['image1']}}"
+                        alt="human">
+                    </div>
+                    <div>
+                      <h5>{{journeyData.journy[0]['name']}} <span>(Parent #1)</span> </h5>
+                      <h6 class="gray">In in nisi augue diam pellentesque sit nam ut faucibus. </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal  -->
+
+
+
+
+</section>
