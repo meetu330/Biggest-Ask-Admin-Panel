@@ -52,7 +52,7 @@ div[data-flex] img {
 .card-header .title {
   font-size: 1.6rem;
   color: var(--blue-color);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .card-header .title .blue {
@@ -258,4 +258,3 @@ div[data-flex] img {
   opacity: 0;
   /* display: none !important; */
 }
- 
